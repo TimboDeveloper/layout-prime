@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+:root {
+    --background: #ddd;
+    --container-max-width: 1080px;
+    --fontSize: 1.3rem;
+
+    --red-color: #b8023f;
+    --blue-color: #96aeed;
+    --esports-color: #46df90;
+    --economy-color: #f5b267;
+    --entertainment-color: #bc0cf2;
+    --famous-color: #5e94b6;
+    --line-color: rgba(0,0,0,.2);
+
+    --temporary: blueviolet;
+
+    --link-color: #555;
+
+}
+
+.esports-color {
+    color: var(--esports-color)
+}
+.esports-background {
+    background: var(--esports-color)
+}
+.economy-color {
+    color: var(--economy-color)
+}
+.economy-background {
+    background: var(--economy-color)
+}
+.entertainment-color {
+    color: var(--entertainment-color)
+}
+.entertainment-background {
+    background: var(--entertainment-color)
+}
+.famous-color {
+    color: var(--famous-color)
+}
+.famous-background {
+    background: var(--famous-color)
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+    transition: color .2s;
+    font-size: var(--fontSize);
+}
+a:hover {
+    color: #111;
+}
+
+html, body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+}
+html {
+    font-size: 62.5%;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 180px;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: var(--container-max-width);
+    height: 125px;
+}
+header button {
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border: none;
+}
+header #input {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header #search {
+    width: 270px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 0;
+    padding-left: 50px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    border-radius: 60px;
+}
+.logo .circle {
+    width: 50%;
+    height: 50%;
+    border-radius: 100%;
+    background-color: var(--background);
+}
+.weather {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+}
+.info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.info-container div:not(#city) {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+.info-container #min {
+    color: var(--red-color);
+}
+.info-container #max {
+    color: var(--blue-color);
+}
+.perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.notifications {
+    margin-right: 10px;
+}
+.perfil-photo-container {
+    display: flex;
+    align-items: center;
+}
+.perfil-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #333;
+}
+#dropdown-perfil-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: var(--container-max-width);
+    height: 55px;
+    border-top: 1px solid var(--line-color);
+}
+nav a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 10px;
+    font-weight: 600;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+section .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: var(--container-max-width);
+    border-bottom: 1px solid var(--line-color);
+}
+section #hr-line {
+    position: absolute;
+    top: 44px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--line-color);
+}
+section .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+section .left {
+    min-width: 57%;
+}
+section #news-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#news-container #figure {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#news-container #figure #figure-title {
+    padding: 5px;
+    font-size: var(--fontSize);
+    color: var(--red-color);
+    font-weight: 900;
+}
+#news-container #figure #image {
+    width: 460px;
+    height: 400px;
+    background-color: var(--temporary);
+    border-radius: 25px;
+}
+#figure #emphasis  {
+    position: absolute;
+    right: -160px;
+    top: 65px;
+    width: 340px;
+    height: 320px;
+    padding: 25px;
+    border-radius: 25px;
+    background-color: var(--red-color);
+    color: #fff;
+}
+#emphasis #wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+#emphasis span {
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+#emphasis h1 {
+    font-size: 2.8rem;
+    margin: 10px 0;
+}
+#emphasis p {
+    font-size: 1.4rem;
+}
+#emphasis #footer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 30px;
+    left: 0;
+    bottom: 0;
+}
+#emphasis #footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#emphasis #footer a.active .line {
+    background: #fff;
+}
+#emphasis #footer .line {
+    width: 24px;
+    height: 3px;
+    margin: 0 10px;
+    background-color: rgba(255, 255, 255, .3);
+    cursor: pointer;
+    transition: background-color .2s;
+}
+#emphasis #footer a:hover .line {
+    background-color: #fff;
+}
+
+#section-01 .left {
+    display: initial;
+}
+#section-01 .right {
+    display: flex;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    position: relative;
+    height: 460px !important;
+}
+#section-01 .right figure {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 320px;
+}
+#section-01 .right figure .image {
+    width: 100%;
+    height: 200px;
+    background-color: var(--temporary);
+    border-radius: 15px;
+}
+#section-01 .right figure:first-child {
+    margin: 0 20px;
+}
+#section-01 .right figure .category {
+    margin: 10px 0;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+#section-01 .right figure p {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333;
+}
+
+#section-02 .left .card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 25px 0;
+    background-color: #fff;
+}
+#section-02 .left .card-container .card {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+    margin: 15px 0;
+}
+#section-02 .left .card-container .card #image {
+    background-color: var(--temporary);
+    min-width: 250px;
+    height: 157px;
+    border-radius: 15px;
+    margin-right: 30px;
+}
+#section-02 .left .card-container .card #info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#section-02 .left .card-container .card #info .category {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 10px 0;
+}
+#section-02 .left .card-container .card #info h1 {
+    font-size: 2.0rem;
+}
+#section-02 .left .card-container .card #info #info-footer {
+    position: absolute;
+    bottom: 0;
+}
